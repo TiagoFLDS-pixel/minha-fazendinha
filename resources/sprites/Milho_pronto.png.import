@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://04axviyf7ww1"
-path="res://.godot/imported/Milho_pronto.png-d1ef6bb3fd922c7fe6a8a1d57ef5ba66.ctex"
+path="res://.godot/imported/Milho_pronto.png-1d42582055373d00e002f0258ebabb3f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Milho_pronto.png"
-dest_files=["res://.godot/imported/Milho_pronto.png-d1ef6bb3fd922c7fe6a8a1d57ef5ba66.ctex"]
+source_file="res://resources/sprites/Milho_pronto.png"
+dest_files=["res://.godot/imported/Milho_pronto.png-1d42582055373d00e002f0258ebabb3f.ctex"]
 
 [params]
 

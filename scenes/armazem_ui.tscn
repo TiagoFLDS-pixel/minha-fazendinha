@@ -1,0 +1,49 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/armazem_ui.gd" id="1_ui"]
+
+[node name="ArmazemUI" type="CanvasLayer"]
+script = ExtResource("1_ui")
+
+[node name="Painel" type="Panel" parent="."]
+visible = false
+offset_left = 568.0
+offset_top = 362.0
+offset_right = 968.0
+offset_bottom = 662.0
+
+[node name="TituloLabel" type="Label" parent="Painel"]
+offset_left = 24.0
+offset_top = 16.0
+offset_right = 376.0
+offset_bottom = 48.0
+theme_override_font_sizes/font_size = 28
+text = "Armazém"
+
+[node name="MoedasLabel" type="Label" parent="Painel"]
+offset_left = 24.0
+offset_top = 56.0
+offset_right = 376.0
+offset_bottom = 80.0
+theme_override_font_sizes/font_size = 20
+text = "Moedas: 0"
+
+[node name="Lista" type="VBoxContainer" parent="Painel"]
+offset_left = 24.0
+offset_top = 92.0
+offset_right = 376.0
+offset_bottom = 192.0
+
+[node name="LojaButton" type="Button" parent="Painel"]
+offset_left = 24.0
+offset_top = 204.0
+offset_right = 150.0
+offset_bottom = 240.0
+text = "Loja"
+
+[node name="FecharButton" type="Button" parent="Painel"]
+offset_left = 166.0
+offset_top = 204.0
+offset_right = 282.0
+offset_bottom = 240.0
+text = "Fechar"

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bb2nqc8pqu7x7"
-path="res://.godot/imported/Milho_broto.png-cf9f646a038a553a7662f04c6e94b311.ctex"
+uid="uid://ju2i3je0nyfj"
+path="res://.godot/imported/Milho_Adulto.png-2a315ab6d119c8b02ceb8bc2f87c41d6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Milho_broto.png"
-dest_files=["res://.godot/imported/Milho_broto.png-cf9f646a038a553a7662f04c6e94b311.ctex"]
+source_file="res://resources/sprites/Milho_Adulto.png"
+dest_files=["res://.godot/imported/Milho_Adulto.png-2a315ab6d119c8b02ceb8bc2f87c41d6.ctex"]
 
 [params]
 

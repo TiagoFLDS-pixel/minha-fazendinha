@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="Cultura" load_steps=11 format=3]
 
-[ext_resource type="Script" path="res://cultura.gd" id="1_cultura"]
-[ext_resource type="Script" path="res://estagio_cultura.gd" id="2_estagio"]
-[ext_resource type="Texture2D" uid="uid://b5yaxroabp1xd" path="res://Semente.png" id="3_semente"]
-[ext_resource type="Texture2D" uid="uid://bb2nqc8pqu7x7" path="res://Milho_broto.png" id="4_broto"]
-[ext_resource type="Texture2D" uid="uid://ju2i3je0nyfj" path="res://Milho_Adulto.png" id="5_adulta"]
-[ext_resource type="Texture2D" uid="uid://04axviyf7ww1" path="res://Milho_pronto.png" id="6_pronta"]
+[ext_resource type="Script" path="res://scripts/cultura.gd" id="1_cultura"]
+[ext_resource type="Script" path="res://scripts/estagio_cultura.gd" id="2_estagio"]
+[ext_resource type="Texture2D" uid="uid://b5yaxroabp1xd" path="res://resources/sprites/Semente.png" id="3_semente"]
+[ext_resource type="Texture2D" uid="uid://bb2nqc8pqu7x7" path="res://resources/sprites/Milho_broto.png" id="4_broto"]
+[ext_resource type="Texture2D" uid="uid://ju2i3je0nyfj" path="res://resources/sprites/Milho_Adulto.png" id="5_adulta"]
+[ext_resource type="Texture2D" uid="uid://04axviyf7ww1" path="res://resources/sprites/Milho_pronto.png" id="6_pronta"]
 
 [sub_resource type="Resource" id="Resource_ms1"]
 script = ExtResource("2_estagio")

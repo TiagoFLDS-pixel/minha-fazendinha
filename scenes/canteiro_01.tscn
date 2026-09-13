@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bi8awvtdfdpgg"]
 
-[ext_resource type="Script" uid="uid://d4dhbdtmkjrja" path="res://canteiro_01.gd" id="1_470ef"]
-[ext_resource type="Resource" path="res://culturas/milho.tres" id="2_milho"]
+[ext_resource type="Script" uid="uid://d4dhbdtmkjrja" path="res://scripts/canteiro_01.gd" id="1_470ef"]
+[ext_resource type="Resource" path="res://resources/culturas/milho.tres" id="2_milho"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wp5od"]
 size = Vector2(78, 99.5)

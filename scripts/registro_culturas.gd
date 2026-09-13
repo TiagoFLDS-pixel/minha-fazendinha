@@ -1,23 +1,25 @@
 extends Node
 
-## Autoload "Culturas": carrega todo .tres de res://culturas/ na inicialização,
-## indexado por Cultura.id. Adicionar uma cultura nova = só criar o .tres na
-## pasta; nada aqui precisa mudar.
+## Autoload "Culturas": carrega todo .tres de res://resources/culturas/ na
+## inicialização, indexado por Cultura.id. Adicionar uma cultura nova = só
+## criar o .tres na pasta; nada aqui precisa mudar.
+
+const PASTA_CULTURAS := "res://resources/culturas"
 
 var registro: Dictionary = {}
 
 
 func _ready() -> void:
-	var dir := DirAccess.open("res://culturas")
+	var dir := DirAccess.open(PASTA_CULTURAS)
 	if dir == null:
-		push_warning("Pasta res://culturas não encontrada.")
+		push_warning("Pasta %s não encontrada." % PASTA_CULTURAS)
 		return
 
 	dir.list_dir_begin()
 	var nome_arquivo := dir.get_next()
 	while nome_arquivo != "":
 		if nome_arquivo.ends_with(".tres"):
-			var recurso: Cultura = load("res://culturas/%s" % nome_arquivo)
+			var recurso: Cultura = load("%s/%s" % [PASTA_CULTURAS, nome_arquivo])
 			if recurso:
 				registro[recurso.id] = recurso
 		nome_arquivo = dir.get_next()

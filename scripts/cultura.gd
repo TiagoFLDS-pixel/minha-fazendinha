@@ -2,8 +2,8 @@ class_name Cultura
 extends Resource
 
 ## Define os dados de uma cultura plantável (sprites, tempos e economia por
-## estágio). Novas culturas são criadas como recursos .tres em res://culturas/,
-## sem precisar de código novo.
+## estágio). Novas culturas são criadas como recursos .tres em
+## res://resources/culturas/, sem precisar de código novo.
 
 @export var id: String = ""
 @export var nome: String = ""
