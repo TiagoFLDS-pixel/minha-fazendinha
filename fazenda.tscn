@@ -1,0 +1,132 @@
+[gd_scene load_steps=9 format=3 uid="uid://dhjow6aupom3k"]
+
+[ext_resource type="Texture2D" uid="uid://1sr64sqbo3c2" path="res://Fundo_Fazenda.png" id="1_vq05k"]
+[ext_resource type="PackedScene" uid="uid://bi8awvtdfdpgg" path="res://canteiro_01.tscn" id="2_nbkiu"]
+[ext_resource type="Script" path="res://armazem.gd" id="3_armazem"]
+[ext_resource type="PackedScene" path="res://armazem_ui.tscn" id="4_armazemui"]
+[ext_resource type="PackedScene" path="res://loja_ui.tscn" id="5_lojaui"]
+[ext_resource type="Script" path="res://fazenda.gd" id="6_fazenda"]
+[ext_resource type="PackedScene" path="res://seletor_sementes_ui.tscn" id="7_seletor"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_armazem"]
+size = Vector2(260, 260)
+
+[node name="Fazenda" type="Node2D" unique_id=1001441164]
+script = ExtResource("6_fazenda")
+
+[node name="PlanodeFundo" type="Sprite2D" parent="." unique_id=206032473]
+position = Vector2(772, 522)
+texture = ExtResource("1_vq05k")
+
+[node name="Armazem" type="Area2D" parent="."]
+position = Vector2(255, 150)
+script = ExtResource("3_armazem")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Armazem"]
+shape = SubResource("RectangleShape2D_armazem")
+
+[node name="ArmazemUI" parent="." instance=ExtResource("4_armazemui")]
+
+[node name="LojaUI" parent="." instance=ExtResource("5_lojaui")]
+
+[node name="SeletorSementesUI" parent="." instance=ExtResource("7_seletor")]
+
+[node name="Canteiro01" parent="." unique_id=2026031493 instance=ExtResource("2_nbkiu")]
+
+[node name="Canteiro02" parent="." unique_id=104933159 instance=ExtResource("2_nbkiu")]
+position = Vector2(105, 0)
+
+[node name="Canteiro03" parent="." unique_id=876311231 instance=ExtResource("2_nbkiu")]
+position = Vector2(209, -1)
+
+[node name="Canteiro04" parent="." unique_id=1903365880 instance=ExtResource("2_nbkiu")]
+position = Vector2(316, -1)
+
+[node name="Canteiro05" parent="." unique_id=195735420 instance=ExtResource("2_nbkiu")]
+position = Vector2(425, -2)
+
+[node name="Canteiro06" parent="." unique_id=1064776201 instance=ExtResource("2_nbkiu")]
+position = Vector2(533, -4)
+
+[node name="Canteiro07" parent="." unique_id=1489744619 instance=ExtResource("2_nbkiu")]
+position = Vector2(640, 1)
+
+[node name="Canteiro08" parent="." unique_id=925674584 instance=ExtResource("2_nbkiu")]
+position = Vector2(748, 0)
+
+[node name="Canteiro09" parent="." unique_id=722230703 instance=ExtResource("2_nbkiu")]
+position = Vector2(857, -2)
+
+[node name="Canteiro10" parent="." unique_id=129614778 instance=ExtResource("2_nbkiu")]
+position = Vector2(-105, 80)
+scale = Vector2(1.2, 1.2)
+
+[node name="Canteiro11" parent="." unique_id=644339651 instance=ExtResource("2_nbkiu")]
+position = Vector2(5, 80)
+scale = Vector2(1.2, 1.2)
+
+[node name="Canteiro12" parent="." unique_id=1643522044 instance=ExtResource("2_nbkiu")]
+position = Vector2(119, 80)
+scale = Vector2(1.2, 1.2)
+
+[node name="Canteiro13" parent="." unique_id=1982069193 instance=ExtResource("2_nbkiu")]
+position = Vector2(231, 79)
+scale = Vector2(1.2, 1.2)
+
+[node name="Canteiro14" parent="." unique_id=1107975430 instance=ExtResource("2_nbkiu")]
+position = Vector2(346.00003, 78)
+scale = Vector2(1.2, 1.2)
+
+[node name="Canteiro15" parent="." unique_id=135478168 instance=ExtResource("2_nbkiu")]
+position = Vector2(463, 77)
+scale = Vector2(1.2, 1.2)
+
+[node name="Canteiro16" parent="." unique_id=1582122288 instance=ExtResource("2_nbkiu")]
+position = Vector2(577, 81)
+scale = Vector2(1.2, 1.2)
+
+[node name="Canteiro17" parent="." unique_id=388506474 instance=ExtResource("2_nbkiu")]
+position = Vector2(690, 78)
+scale = Vector2(1.2, 1.2)
+
+[node name="Canteiro18" parent="." unique_id=934329080 instance=ExtResource("2_nbkiu")]
+position = Vector2(803, 79)
+scale = Vector2(1.2, 1.2)
+
+[node name="Canteiro19" parent="." unique_id=1737072195 instance=ExtResource("2_nbkiu")]
+position = Vector2(-170, 209.00003)
+scale = Vector2(1.3, 1.3)
+
+[node name="Canteiro20" parent="." unique_id=303913815 instance=ExtResource("2_nbkiu")]
+position = Vector2(-51.000015, 208)
+scale = Vector2(1.3, 1.3)
+
+[node name="Canteiro21" parent="." unique_id=300496912 instance=ExtResource("2_nbkiu")]
+position = Vector2(71, 208.00002)
+scale = Vector2(1.3, 1.3)
+
+[node name="Canteiro22" parent="." unique_id=1464902971 instance=ExtResource("2_nbkiu")]
+position = Vector2(190, 207.00002)
+scale = Vector2(1.3, 1.3)
+
+[node name="Canteiro23" parent="." unique_id=585126764 instance=ExtResource("2_nbkiu")]
+position = Vector2(312, 206)
+scale = Vector2(1.3, 1.3)
+
+[node name="Canteiro24" parent="." unique_id=1689976395 instance=ExtResource("2_nbkiu")]
+position = Vector2(430.00003, 206)
+scale = Vector2(1.3, 1.3)
+
+[node name="Canteiro25" parent="." unique_id=683853140 instance=ExtResource("2_nbkiu")]
+position = Vector2(550, 204)
+scale = Vector2(1.3, 1.3)
+
+[node name="Canteiro26" parent="." unique_id=868671138 instance=ExtResource("2_nbkiu")]
+position = Vector2(671.00006, 208.00002)
+scale = Vector2(1.3, 1.3)
+
+[node name="Canteiro27" parent="." unique_id=1221751875 instance=ExtResource("2_nbkiu")]
+position = Vector2(792, 210.00002)
+scale = Vector2(1.3, 1.3)
+
+[connection signal="input_event" from="Armazem" to="Armazem" method="_on_input_event"]

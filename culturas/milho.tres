@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="Cultura" load_steps=11 format=3]
+
+[ext_resource type="Script" path="res://cultura.gd" id="1_cultura"]
+[ext_resource type="Script" path="res://estagio_cultura.gd" id="2_estagio"]
+[ext_resource type="Texture2D" uid="uid://b5yaxroabp1xd" path="res://Semente.png" id="3_semente"]
+[ext_resource type="Texture2D" uid="uid://bb2nqc8pqu7x7" path="res://Milho_broto.png" id="4_broto"]
+[ext_resource type="Texture2D" uid="uid://ju2i3je0nyfj" path="res://Milho_Adulto.png" id="5_adulta"]
+[ext_resource type="Texture2D" uid="uid://04axviyf7ww1" path="res://Milho_pronto.png" id="6_pronta"]
+
+[sub_resource type="Resource" id="Resource_ms1"]
+script = ExtResource("2_estagio")
+sprite = ExtResource("3_semente")
+escala = Vector2(0.05, 0.05)
+offset = Vector2(422, 343)
+duracao = 120.0
+
+[sub_resource type="Resource" id="Resource_mb1"]
+script = ExtResource("2_estagio")
+sprite = ExtResource("4_broto")
+escala = Vector2(0.05, 0.05)
+offset = Vector2(420, 324)
+duracao = 240.0
+
+[sub_resource type="Resource" id="Resource_ma1"]
+script = ExtResource("2_estagio")
+sprite = ExtResource("5_adulta")
+escala = Vector2(0.08, 0.08)
+offset = Vector2(421, 298)
+duracao = 240.0
+
+[sub_resource type="Resource" id="Resource_mp1"]
+script = ExtResource("2_estagio")
+sprite = ExtResource("6_pronta")
+escala = Vector2(0.08, 0.08)
+offset = Vector2(420, 298)
+duracao = 0.0
+
+[resource]
+script = ExtResource("1_cultura")
+id = "milho"
+nome = "Milho"
+estagio_semente = SubResource("Resource_ms1")
+estagio_broto = SubResource("Resource_mb1")
+estagio_adulta = SubResource("Resource_ma1")
+estagio_pronta = SubResource("Resource_mp1")
+quantidade_colhida = 1
+preco_semente = 5
+preco_venda = 10

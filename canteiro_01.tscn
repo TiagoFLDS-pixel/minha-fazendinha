@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bi8awvtdfdpgg"]
+
+[ext_resource type="Script" uid="uid://d4dhbdtmkjrja" path="res://canteiro_01.gd" id="1_470ef"]
+[ext_resource type="Resource" path="res://culturas/milho.tres" id="2_milho"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wp5od"]
+size = Vector2(78, 99.5)
+
+[node name="Canteiro01" type="Area2D" unique_id=2026031493]
+script = ExtResource("1_470ef")
+cultura = ExtResource("2_milho")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1313655273]
+position = Vector2(420, 346)
+shape = SubResource("RectangleShape2D_wp5od")
+
+[node name="Visual" type="Sprite2D" parent="." unique_id=2139856660]
+visible = false
+position = Vector2(420, 328)
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
