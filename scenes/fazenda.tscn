@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://1sr64sqbo3c2" path="res://resources/sprites/Fundo_Fazenda.png" id="1_vq05k"]
 [ext_resource type="PackedScene" uid="uid://bi8awvtdfdpgg" path="res://scenes/canteiro_01.tscn" id="2_nbkiu"]
-[ext_resource type="Script" path="res://scripts/armazem.gd" id="3_armazem"]
+[ext_resource type="Script" path="res://scripts/celeiro_trigger.gd" id="3_armazem"]
 [ext_resource type="PackedScene" path="res://scenes/armazem_ui.tscn" id="4_armazemui"]
 [ext_resource type="PackedScene" path="res://scenes/loja_ui.tscn" id="5_lojaui"]
 [ext_resource type="Script" path="res://scripts/fazenda.gd" id="6_fazenda"]
