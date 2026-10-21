@@ -153,6 +153,11 @@ func aplicar_save_data(dados: Dictionary) -> void:
 		var cultura_salva := Culturas.get_cultura(cultura_id)
 		if cultura_salva:
 			cultura = cultura_salva
+		else:
+			push_warning("%s: cultura_id '%s' do save não existe no registo; canteiro fica vazio." % [name, cultura_id])
+			plantado_em = -1.0
+			atualizar_estado()
+			return
 
 	plantado_em = dados.get("plantado_em", -1.0)
 	atualizar_estado()
