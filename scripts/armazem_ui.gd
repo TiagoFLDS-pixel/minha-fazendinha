@@ -36,13 +36,30 @@ func atualizar() -> void:
 	for filho in lista.get_children():
 		filho.queue_free()
 
-	if Inventario.items.is_empty():
+	var linhas := 0
+	for id in Inventario.items.keys():
+		var quantidade: int = Inventario.items[id]
+		if quantidade <= 0:
+			continue
+		var linha := Label.new()
+		linha.text = "%s: %d" % [_nome_do_item(String(id)), quantidade]
+		lista.add_child(linha)
+		linhas += 1
+
+	if linhas == 0:
 		var vazio := Label.new()
 		vazio.text = "Estoque vazio."
 		lista.add_child(vazio)
-		return
 
-	for id in Inventario.items.keys():
-		var linha := Label.new()
-		linha.text = "%s: %d" % [String(id).capitalize(), Inventario.items[id]]
-		lista.add_child(linha)
+
+func _nome_do_item(id: String) -> String:
+	if id.begins_with("semente_"):
+		var da_semente := Culturas.get_cultura(id.trim_prefix("semente_"))
+		if da_semente:
+			return "Sementes de %s" % da_semente.nome
+		return id.capitalize()
+
+	var produto := Culturas.get_cultura(id)
+	if produto:
+		return produto.nome
+	return id.capitalize()
