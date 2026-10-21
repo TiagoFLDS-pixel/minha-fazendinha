@@ -17,22 +17,22 @@ duracao = 120.0
 [sub_resource type="Resource" id="Resource_cebola_broto"]
 script = ExtResource("2_estagio")
 sprite = ExtResource("4_broto")
-escala = Vector2(0.22, 0.22)
-offset = Vector2(420, 307)
+escala = Vector2(0.146, 0.146)
+offset = Vector2(420, 322.4)
 duracao = 240.0
 
 [sub_resource type="Resource" id="Resource_cebola_adulta"]
 script = ExtResource("2_estagio")
 sprite = ExtResource("5_adulta")
-escala = Vector2(0.22, 0.22)
-offset = Vector2(420, 307)
+escala = Vector2(0.206, 0.206)
+offset = Vector2(420, 309.9)
 duracao = 240.0
 
 [sub_resource type="Resource" id="Resource_cebola_pronta"]
 script = ExtResource("2_estagio")
 sprite = ExtResource("6_pronta")
-escala = Vector2(0.22, 0.22)
-offset = Vector2(420, 307)
+escala = Vector2(0.166, 0.166)
+offset = Vector2(420, 318.2)
 duracao = 0.0
 
 [resource]

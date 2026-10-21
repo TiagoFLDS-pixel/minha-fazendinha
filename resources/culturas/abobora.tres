@@ -17,22 +17,22 @@ duracao = 300.0
 [sub_resource type="Resource" id="Resource_abobora_broto"]
 script = ExtResource("2_estagio")
 sprite = ExtResource("4_broto")
-escala = Vector2(0.22, 0.22)
-offset = Vector2(420, 307)
+escala = Vector2(0.144, 0.144)
+offset = Vector2(420, 322.7)
 duracao = 480.0
 
 [sub_resource type="Resource" id="Resource_abobora_adulta"]
 script = ExtResource("2_estagio")
 sprite = ExtResource("5_adulta")
-escala = Vector2(0.22, 0.22)
-offset = Vector2(420, 307)
+escala = Vector2(0.225, 0.225)
+offset = Vector2(420, 306.3)
 duracao = 600.0
 
 [sub_resource type="Resource" id="Resource_abobora_pronta"]
 script = ExtResource("2_estagio")
 sprite = ExtResource("6_pronta")
-escala = Vector2(0.22, 0.22)
-offset = Vector2(420, 307)
+escala = Vector2(0.235, 0.235)
+offset = Vector2(420, 304.4)
 duracao = 0.0
 
 [resource]
