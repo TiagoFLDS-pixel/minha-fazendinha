@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://04axviyf7ww1"
-path="res://.godot/imported/Milho_pronto.png-1d42582055373d00e002f0258ebabb3f.ctex"
+uid="uid://c5hxmqubwvxrs"
+path="res://.godot/imported/Morango_adulta.png-0e83d103f553b42d3c31bdfe304d5911.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/sprites/Milho_pronto.png"
-dest_files=["res://.godot/imported/Milho_pronto.png-1d42582055373d00e002f0258ebabb3f.ctex"]
+source_file="res://resources/sprites/Morango_adulta.png"
+dest_files=["res://.godot/imported/Morango_adulta.png-0e83d103f553b42d3c31bdfe304d5911.ctex"]
 
 [params]
 

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/cultura.gd" id="1_cultura"]
 [ext_resource type="Script" path="res://scripts/estagio_cultura.gd" id="2_estagio"]
-[ext_resource type="Texture2D" uid="uid://b5yaxroabp1xd" path="res://resources/sprites/Semente.png" id="3_semente"]
+[ext_resource type="Texture2D" path="res://resources/sprites/Semente_plantada.png" id="3_semente"]
 [ext_resource type="Texture2D" path="res://resources/sprites/Batata_broto.png" id="4_broto"]
 [ext_resource type="Texture2D" path="res://resources/sprites/Batata_adulta.png" id="5_adulta"]
 [ext_resource type="Texture2D" path="res://resources/sprites/Batata_pronta.png" id="6_pronta"]
@@ -10,8 +10,8 @@
 [sub_resource type="Resource" id="Resource_batata_semente"]
 script = ExtResource("2_estagio")
 sprite = ExtResource("3_semente")
-escala = Vector2(0.05, 0.05)
-offset = Vector2(422, 343)
+escala = Vector2(0.073, 0.073)
+offset = Vector2(420, 337.0)
 duracao = 180.0
 
 [sub_resource type="Resource" id="Resource_batata_broto"]
