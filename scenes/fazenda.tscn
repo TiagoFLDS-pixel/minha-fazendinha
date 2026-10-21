@@ -15,7 +15,7 @@ size = Vector2(260, 260)
 script = ExtResource("6_fazenda")
 
 [node name="PlanodeFundo" type="Sprite2D" parent="." unique_id=206032473]
-position = Vector2(772, 522)
+position = Vector2(768, 512)
 texture = ExtResource("1_vq05k")
 
 [node name="Armazem" type="Area2D" parent="."]
