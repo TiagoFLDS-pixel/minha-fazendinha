@@ -62,7 +62,7 @@ func criar_linha(cultura: Cultura) -> HBoxContainer:
 
 func comprar_semente(cultura: Cultura) -> void:
 	if Inventario.moedas < cultura.preco_semente:
-		print("Moedas insuficientes para comprar semente de %s." % cultura.nome)
+		Avisos.mostrar("Moedas insuficientes")
 		return
 
 	Inventario.moedas -= cultura.preco_semente
@@ -73,9 +73,10 @@ func comprar_semente(cultura: Cultura) -> void:
 
 func vender_produto(cultura: Cultura) -> void:
 	if not Inventario.remove_item(cultura.id, 1):
-		print("Sem estoque de %s para vender." % cultura.nome)
+		Avisos.mostrar("Sem %s para vender" % cultura.nome)
 		return
 
 	Inventario.moedas += cultura.preco_venda
+	Avisos.mostrar("+%d moedas" % cultura.preco_venda)
 	atualizar()
 	SaveManager.salvar()

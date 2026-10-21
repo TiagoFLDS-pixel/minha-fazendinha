@@ -47,7 +47,7 @@ func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> voi
 		elif estado == 4:
 			colher()
 		else:
-			print("A planta ainda está crescendo.")
+			Avisos.mostrar("Ainda a crescer…")
 
 
 func plantar_cultura(nova_cultura: Cultura) -> void:
@@ -56,20 +56,20 @@ func plantar_cultura(nova_cultura: Cultura) -> void:
 
 	var id_semente := "semente_%s" % nova_cultura.id
 	if not Inventario.remove_item(id_semente, 1):
-		print("Sem sementes de %s." % nova_cultura.nome)
+		Avisos.mostrar("Sem sementes de %s" % nova_cultura.nome)
 		return
 
 	cultura = nova_cultura
 	plantado_em = Time.get_unix_time_from_system()
 	atualizar_estado()
-	print("%s plantado!" % cultura.nome)
+	Avisos.mostrar("%s plantado!" % cultura.nome)
 	SaveManager.salvar()
 
 
 func colher() -> void:
 	if cultura:
 		Inventario.add_item(cultura.id, cultura.quantidade_colhida)
-		print("%s colhido!" % cultura.nome)
+		Avisos.mostrar("+%d %s" % [cultura.quantidade_colhida, cultura.nome])
 
 	plantado_em = -1.0
 	atualizar_estado()
