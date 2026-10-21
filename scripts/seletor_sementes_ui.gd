@@ -1,7 +1,7 @@
 extends CanvasLayer
 
 @onready var painel: Panel = $Painel
-@onready var lista: VBoxContainer = $Painel/Lista
+@onready var lista: VBoxContainer = $Painel/Scroll/Lista
 @onready var fechar_button: Button = $Painel/FecharButton
 
 var _canteiro_alvo: Node = null

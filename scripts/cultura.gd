@@ -8,6 +8,9 @@ extends Resource
 @export var id: String = ""
 @export var nome: String = ""
 
+## Classificação do produto colhido (usada na Loja para agrupar/ordenar).
+@export_enum("Raiz", "Tubérculo", "Bulbo", "Folha", "Fruto", "Grão") var categoria: String = ""
+
 @export var estagio_semente: EstagioCultura
 @export var estagio_broto: EstagioCultura
 @export var estagio_adulta: EstagioCultura

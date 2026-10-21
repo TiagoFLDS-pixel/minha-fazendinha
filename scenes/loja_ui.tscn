@@ -7,9 +7,9 @@ script = ExtResource("1_loja")
 
 [node name="Painel" type="Panel" parent="."]
 visible = false
-offset_left = 468.0
+offset_left = 383.0
 offset_top = 322.0
-offset_right = 1068.0
+offset_right = 1153.0
 offset_bottom = 702.0
 
 [node name="TituloLabel" type="Label" parent="Painel"]
@@ -28,11 +28,16 @@ offset_bottom = 80.0
 theme_override_font_sizes/font_size = 20
 text = "Moedas: 0"
 
-[node name="Lista" type="VBoxContainer" parent="Painel"]
+[node name="Scroll" type="ScrollContainer" parent="Painel"]
 offset_left = 24.0
 offset_top = 92.0
-offset_right = 576.0
+offset_right = 746.0
 offset_bottom = 268.0
+horizontal_scroll_mode = 0
+
+[node name="Lista" type="VBoxContainer" parent="Painel/Scroll"]
+layout_mode = 2
+size_flags_horizontal = 3
 
 [node name="FecharButton" type="Button" parent="Painel"]
 offset_left = 24.0

@@ -30,5 +30,19 @@ func get_cultura(id: String) -> Cultura:
 	return registro.get(id)
 
 
+const ORDEM_CATEGORIAS := ["Grão", "Raiz", "Tubérculo", "Bulbo", "Folha", "Fruto"]
+
+
+## Todas as culturas, ordenadas por categoria e depois por nome.
 func get_todas() -> Array:
-	return registro.values()
+	var todas := registro.values()
+	todas.sort_custom(_comparar)
+	return todas
+
+
+func _comparar(a: Cultura, b: Cultura) -> bool:
+	var ia := ORDEM_CATEGORIAS.find(a.categoria)
+	var ib := ORDEM_CATEGORIAS.find(b.categoria)
+	if ia != ib:
+		return ia < ib
+	return a.nome < b.nome

@@ -2,8 +2,9 @@ extends CanvasLayer
 
 @onready var painel: Panel = $Painel
 @onready var moedas_label: Label = $Painel/MoedasLabel
-@onready var lista: VBoxContainer = $Painel/Lista
+@onready var lista: VBoxContainer = $Painel/Scroll/Lista
 @onready var fechar_button: Button = $Painel/FecharButton
+@onready var armazem_ui: CanvasLayer = $"../ArmazemUI"
 
 
 func _ready() -> void:
@@ -12,6 +13,8 @@ func _ready() -> void:
 
 
 func abrir() -> void:
+	# Fecha o armazém se estiver aberto
+	armazem_ui.fechar()
 	atualizar()
 	painel.visible = true
 
@@ -34,8 +37,9 @@ func criar_linha(cultura: Cultura) -> HBoxContainer:
 	var linha := HBoxContainer.new()
 
 	var label := Label.new()
-	label.text = "%s — Semente: %dc | Venda: %dc | Estoque: %d" % [
+	label.text = "%s (%s) — Semente: %dc | Venda: %dc | Estoque: %d" % [
 		cultura.nome,
+		cultura.categoria,
 		cultura.preco_semente,
 		cultura.preco_venda,
 		Inventario.get_quantity(cultura.id),

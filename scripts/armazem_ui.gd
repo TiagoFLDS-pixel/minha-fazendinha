@@ -15,6 +15,8 @@ func _ready() -> void:
 
 
 func abrir() -> void:
+	# Fecha a loja se estiver aberta
+	loja_ui.fechar()
 	atualizar()
 	painel.visible = true
 

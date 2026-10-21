@@ -1,0 +1,49 @@
+[gd_resource type="Resource" script_class="Cultura" load_steps=11 format=3]
+
+[ext_resource type="Script" path="res://scripts/cultura.gd" id="1_cultura"]
+[ext_resource type="Script" path="res://scripts/estagio_cultura.gd" id="2_estagio"]
+[ext_resource type="Texture2D" uid="uid://b5yaxroabp1xd" path="res://resources/sprites/Semente.png" id="3_semente"]
+[ext_resource type="Texture2D" path="res://resources/sprites/Alface_broto.png" id="4_broto"]
+[ext_resource type="Texture2D" path="res://resources/sprites/Alface_adulta.png" id="5_adulta"]
+[ext_resource type="Texture2D" path="res://resources/sprites/Alface_pronta.png" id="6_pronta"]
+
+[sub_resource type="Resource" id="Resource_alface_semente"]
+script = ExtResource("2_estagio")
+sprite = ExtResource("3_semente")
+escala = Vector2(0.04, 0.04)
+offset = Vector2(422, 343)
+duracao = 20.0
+
+[sub_resource type="Resource" id="Resource_alface_broto"]
+script = ExtResource("2_estagio")
+sprite = ExtResource("4_broto")
+escala = Vector2(0.22, 0.22)
+offset = Vector2(420, 307)
+duracao = 40.0
+
+[sub_resource type="Resource" id="Resource_alface_adulta"]
+script = ExtResource("2_estagio")
+sprite = ExtResource("5_adulta")
+escala = Vector2(0.22, 0.22)
+offset = Vector2(420, 307)
+duracao = 60.0
+
+[sub_resource type="Resource" id="Resource_alface_pronta"]
+script = ExtResource("2_estagio")
+sprite = ExtResource("6_pronta")
+escala = Vector2(0.22, 0.22)
+offset = Vector2(420, 307)
+duracao = 0.0
+
+[resource]
+script = ExtResource("1_cultura")
+id = "alface"
+nome = "Alface"
+categoria = "Folha"
+estagio_semente = SubResource("Resource_alface_semente")
+estagio_broto = SubResource("Resource_alface_broto")
+estagio_adulta = SubResource("Resource_alface_adulta")
+estagio_pronta = SubResource("Resource_alface_pronta")
+quantidade_colhida = 1
+preco_semente = 3
+preco_venda = 5
