@@ -12,21 +12,21 @@ script = ExtResource("2_estagio")
 sprite = ExtResource("3_semente")
 escala = Vector2(0.073, 0.073)
 offset = Vector2(420, 337.0)
-duracao = 180.0
+duracao = 264.0
 
 [sub_resource type="Resource" id="Resource_pimentao_broto"]
 script = ExtResource("2_estagio")
 sprite = ExtResource("4_broto")
 escala = Vector2(0.170, 0.170)
 offset = Vector2(420, 317.6)
-duracao = 300.0
+duracao = 528.0
 
 [sub_resource type="Resource" id="Resource_pimentao_adulta"]
 script = ExtResource("2_estagio")
 sprite = ExtResource("5_adulta")
 escala = Vector2(0.187, 0.187)
 offset = Vector2(420, 314.1)
-duracao = 360.0
+duracao = 528.0
 
 [sub_resource type="Resource" id="Resource_pimentao_pronta"]
 script = ExtResource("2_estagio")
@@ -44,6 +44,6 @@ estagio_semente = SubResource("Resource_pimentao_semente")
 estagio_broto = SubResource("Resource_pimentao_broto")
 estagio_adulta = SubResource("Resource_pimentao_adulta")
 estagio_pronta = SubResource("Resource_pimentao_pronta")
-quantidade_colhida = 2
-preco_semente = 18
-preco_venda = 25
+quantidade_colhida = 3
+preco_semente = 21
+preco_venda = 23

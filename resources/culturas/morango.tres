@@ -12,21 +12,21 @@ script = ExtResource("2_estagio")
 sprite = ExtResource("3_semente")
 escala = Vector2(0.073, 0.073)
 offset = Vector2(420, 337.0)
-duracao = 120.0
+duracao = 168.0
 
 [sub_resource type="Resource" id="Resource_morango_broto"]
 script = ExtResource("2_estagio")
 sprite = ExtResource("4_broto")
 escala = Vector2(0.137, 0.137)
 offset = Vector2(420, 324.2)
-duracao = 240.0
+duracao = 336.0
 
 [sub_resource type="Resource" id="Resource_morango_adulta"]
 script = ExtResource("2_estagio")
 sprite = ExtResource("5_adulta")
 escala = Vector2(0.142, 0.142)
 offset = Vector2(420, 323.1)
-duracao = 300.0
+duracao = 336.0
 
 [sub_resource type="Resource" id="Resource_morango_pronta"]
 script = ExtResource("2_estagio")
@@ -44,6 +44,6 @@ estagio_semente = SubResource("Resource_morango_semente")
 estagio_broto = SubResource("Resource_morango_broto")
 estagio_adulta = SubResource("Resource_morango_adulta")
 estagio_pronta = SubResource("Resource_morango_pronta")
-quantidade_colhida = 2
-preco_semente = 15
-preco_venda = 20
+quantidade_colhida = 3
+preco_semente = 16
+preco_venda = 17
