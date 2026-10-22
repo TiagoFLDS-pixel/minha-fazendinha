@@ -1,39 +1,39 @@
-[gd_resource type="Resource" script_class="Cultura" load_steps=11 format=3]
+[gd_resource type="Resource" script_class="Cultura" format=3 uid="uid://c2ykuv7g4d162"]
 
-[ext_resource type="Script" path="res://scripts/cultura.gd" id="1_cultura"]
-[ext_resource type="Script" path="res://scripts/estagio_cultura.gd" id="2_estagio"]
-[ext_resource type="Texture2D" path="res://resources/sprites/Semente_plantada.png" id="3_semente"]
-[ext_resource type="Texture2D" path="res://resources/sprites/Cebola_broto.png" id="4_broto"]
-[ext_resource type="Texture2D" path="res://resources/sprites/Cebola_adulta.png" id="5_adulta"]
-[ext_resource type="Texture2D" path="res://resources/sprites/Cebola_pronta.png" id="6_pronta"]
-
-[sub_resource type="Resource" id="Resource_cebola_semente"]
-script = ExtResource("2_estagio")
-sprite = ExtResource("3_semente")
-escala = Vector2(0.073, 0.073)
-offset = Vector2(420, 337.0)
-duracao = 144.0
-
-[sub_resource type="Resource" id="Resource_cebola_broto"]
-script = ExtResource("2_estagio")
-sprite = ExtResource("4_broto")
-escala = Vector2(0.146, 0.146)
-offset = Vector2(420, 322.4)
-duracao = 288.0
+[ext_resource type="Script" uid="uid://dp5v5hgunig72" path="res://scripts/cultura.gd" id="1_cultura"]
+[ext_resource type="Script" uid="uid://bdd7a2rudkm8" path="res://scripts/estagio_cultura.gd" id="2_estagio"]
+[ext_resource type="Texture2D" uid="uid://h4ojjsvjnyn6" path="res://resources/sprites/Semente_plantada.png" id="3_semente"]
+[ext_resource type="Texture2D" path="res://resources/sprites/Cebola_broto_x2.png" id="4_broto"]
+[ext_resource type="Texture2D" path="res://resources/sprites/Cebola_adulta_x2.png" id="5_adulta"]
+[ext_resource type="Texture2D" path="res://resources/sprites/Cebola_pronta_x2.png" id="6_pronta"]
 
 [sub_resource type="Resource" id="Resource_cebola_adulta"]
 script = ExtResource("2_estagio")
 sprite = ExtResource("5_adulta")
-escala = Vector2(0.206, 0.206)
-offset = Vector2(420, 309.9)
+escala = Vector2(0.2500, 0.2500)
+offset = Vector2(420.0, 324.2)
+duracao = 288.0
+
+[sub_resource type="Resource" id="Resource_cebola_broto"]
+script = ExtResource("2_estagio")
+sprite = ExtResource("4_broto")
+escala = Vector2(0.2500, 0.2500)
+offset = Vector2(420.0, 346.0)
 duracao = 288.0
 
 [sub_resource type="Resource" id="Resource_cebola_pronta"]
 script = ExtResource("2_estagio")
 sprite = ExtResource("6_pronta")
-escala = Vector2(0.166, 0.166)
-offset = Vector2(420, 318.2)
+escala = Vector2(0.2500, 0.2500)
+offset = Vector2(420.0, 317.9)
 duracao = 0.0
+
+[sub_resource type="Resource" id="Resource_cebola_semente"]
+script = ExtResource("2_estagio")
+sprite = ExtResource("3_semente")
+escala = Vector2(0.073, 0.073)
+offset = Vector2(420, 337)
+duracao = 144.0
 
 [resource]
 script = ExtResource("1_cultura")

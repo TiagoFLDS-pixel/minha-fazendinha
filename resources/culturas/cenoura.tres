@@ -1,39 +1,39 @@
-[gd_resource type="Resource" script_class="Cultura" load_steps=11 format=3]
+[gd_resource type="Resource" script_class="Cultura" format=3 uid="uid://b5s0avbgr4fi5"]
 
-[ext_resource type="Script" path="res://scripts/cultura.gd" id="1_cultura"]
-[ext_resource type="Script" path="res://scripts/estagio_cultura.gd" id="2_estagio"]
-[ext_resource type="Texture2D" path="res://resources/sprites/Semente_plantada.png" id="3_semente"]
-[ext_resource type="Texture2D" path="res://resources/sprites/Cenoura_broto.png" id="4_broto"]
-[ext_resource type="Texture2D" path="res://resources/sprites/Cenoura_adulta.png" id="5_adulta"]
-[ext_resource type="Texture2D" path="res://resources/sprites/Cenoura_pronta.png" id="6_pronta"]
-
-[sub_resource type="Resource" id="Resource_cenoura_semente"]
-script = ExtResource("2_estagio")
-sprite = ExtResource("3_semente")
-escala = Vector2(0.073, 0.073)
-offset = Vector2(420, 337.0)
-duracao = 96.0
-
-[sub_resource type="Resource" id="Resource_cenoura_broto"]
-script = ExtResource("2_estagio")
-sprite = ExtResource("4_broto")
-escala = Vector2(0.159, 0.159)
-offset = Vector2(420, 319.6)
-duracao = 192.0
+[ext_resource type="Script" uid="uid://dp5v5hgunig72" path="res://scripts/cultura.gd" id="1_cultura"]
+[ext_resource type="Script" uid="uid://bdd7a2rudkm8" path="res://scripts/estagio_cultura.gd" id="2_estagio"]
+[ext_resource type="Texture2D" uid="uid://h4ojjsvjnyn6" path="res://resources/sprites/Semente_plantada.png" id="3_semente"]
+[ext_resource type="Texture2D" path="res://resources/sprites/Cenoura_broto_x4.png" id="4_broto"]
+[ext_resource type="Texture2D" path="res://resources/sprites/Cenoura_adulta_x4.png" id="5_adulta"]
+[ext_resource type="Texture2D" path="res://resources/sprites/Cenoura_pronta_x4.png" id="6_pronta"]
 
 [sub_resource type="Resource" id="Resource_cenoura_adulta"]
 script = ExtResource("2_estagio")
 sprite = ExtResource("5_adulta")
-escala = Vector2(0.138, 0.138)
-offset = Vector2(420, 323.9)
+escala = Vector2(0.2500, 0.2500)
+offset = Vector2(420.0, 322.4)
+duracao = 192.0
+
+[sub_resource type="Resource" id="Resource_cenoura_broto"]
+script = ExtResource("2_estagio")
+sprite = ExtResource("4_broto")
+escala = Vector2(0.2500, 0.2500)
+offset = Vector2(420.0, 337.0)
 duracao = 192.0
 
 [sub_resource type="Resource" id="Resource_cenoura_pronta"]
 script = ExtResource("2_estagio")
 sprite = ExtResource("6_pronta")
-escala = Vector2(0.134, 0.134)
-offset = Vector2(420, 324.6)
+escala = Vector2(0.2500, 0.2500)
+offset = Vector2(420.0, 321.2)
 duracao = 0.0
+
+[sub_resource type="Resource" id="Resource_cenoura_semente"]
+script = ExtResource("2_estagio")
+sprite = ExtResource("3_semente")
+escala = Vector2(0.073, 0.073)
+offset = Vector2(420, 337)
+duracao = 96.0
 
 [resource]
 script = ExtResource("1_cultura")
@@ -44,6 +44,6 @@ estagio_semente = SubResource("Resource_cenoura_semente")
 estagio_broto = SubResource("Resource_cenoura_broto")
 estagio_adulta = SubResource("Resource_cenoura_adulta")
 estagio_pronta = SubResource("Resource_cenoura_pronta")
-quantidade_colhida = 2
+quantidade_colhida = 4
 preco_semente = 14
 preco_venda = 18

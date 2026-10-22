@@ -14,7 +14,6 @@ var plantado_em := -1.0
 # O estágio é sempre recalculado a partir daqui, nunca guardado sozinho —
 # é assim que o crescimento continua correto mesmo com o jogo fechado.
 
-var _tween: Tween
 
 @onready var visual: Sprite2D = $Visual
 @onready var seletor_sementes: CanvasLayer = $"../SeletorSementesUI"
@@ -113,10 +112,6 @@ func atualizar_estado() -> void:
 
 
 func atualizar_visual() -> void:
-	if _tween:
-		_tween.kill()
-		_tween = null
-
 	if estado == 0 or cultura == null:
 		visual.visible = false
 		return
@@ -129,15 +124,6 @@ func atualizar_visual() -> void:
 		visual.scale = estagio.escala
 		visual.position = estagio.offset
 
-		if estado == 4:
-			_iniciar_pulso(estagio.escala)
-
-
-func _iniciar_pulso(escala_base: Vector2) -> void:
-	_tween = create_tween()
-	_tween.set_loops()
-	_tween.tween_property(visual, "scale", escala_base * 1.15, 0.4).set_trans(Tween.TRANS_SINE)
-	_tween.tween_property(visual, "scale", escala_base, 0.4).set_trans(Tween.TRANS_SINE)
 
 
 func obter_save_data() -> Dictionary:

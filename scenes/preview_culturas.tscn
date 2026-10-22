@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/preview_culturas.gd" id="1_preview"]
+[ext_resource type="PackedScene" uid="uid://dhjow6aupom3k" path="res://scenes/fazenda.tscn" id="2_fazenda"]
+
+[node name="PreviewCulturas" type="Node2D"]
+script = ExtResource("1_preview")
+
+[node name="Fazenda" parent="." instance=ExtResource("2_fazenda")]
