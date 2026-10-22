@@ -41,6 +41,8 @@ func salvar() -> void:
 	var dados := {
 		"moedas": Inventario.moedas,
 		"items": Inventario.items,
+		"xp": Inventario.xp,
+		"marcos": Inventario.marcos,
 		"canteiros": {},
 	}
 
@@ -82,6 +84,14 @@ func carregar() -> void:
 		for chave in (items as Dictionary).keys():
 			items_convertidos[chave] = int(items[chave])
 		Inventario.items = items_convertidos
+
+	Inventario.xp = int(dados.get("xp", 0))
+	var marcos: Variant = dados.get("marcos")
+	if typeof(marcos) == TYPE_DICTIONARY:
+		var marcos_convertidos: Dictionary = {}
+		for chave in (marcos as Dictionary).keys():
+			marcos_convertidos[chave] = int(marcos[chave])
+		Inventario.marcos = marcos_convertidos
 
 	var canteiros_salvos: Variant = dados.get("canteiros")
 	if typeof(canteiros_salvos) != TYPE_DICTIONARY:

@@ -21,6 +21,10 @@ extends Resource
 @export var preco_semente: int = 0
 @export var preco_venda: int = 0
 
+@export_group("Progressão")
+## XP ganho por colheita. 0 = automático (1 XP por minuto de crescimento).
+@export var xp_colheita: int = 0
+
 
 func get_estagio(estado: int) -> EstagioCultura:
 	match estado:
@@ -29,3 +33,13 @@ func get_estagio(estado: int) -> EstagioCultura:
 		3: return estagio_adulta
 		4: return estagio_pronta
 		_: return null
+
+
+func get_xp_colheita() -> int:
+	if xp_colheita > 0:
+		return xp_colheita
+	var total := 0.0
+	for estagio in [estagio_semente, estagio_broto, estagio_adulta]:
+		if estagio:
+			total += estagio.duracao
+	return maxi(1, roundi(total / 60.0))

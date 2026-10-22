@@ -68,7 +68,9 @@ func plantar_cultura(nova_cultura: Cultura) -> void:
 func colher() -> void:
 	if cultura:
 		Inventario.add_item(cultura.id, cultura.quantidade_colhida)
-		Avisos.mostrar("+%d %s" % [cultura.quantidade_colhida, cultura.nome])
+		var ganho_xp := cultura.get_xp_colheita()
+		Inventario.xp += ganho_xp
+		Avisos.mostrar("+%d %s  ·  +%d XP" % [cultura.quantidade_colhida, cultura.nome, ganho_xp])
 
 	plantado_em = -1.0
 	atualizar_estado()
@@ -107,6 +109,11 @@ func atualizar_estado() -> void:
 	if novo_estado != estado:
 		estado = novo_estado
 		atualizar_visual()
+		# Passar por um estágio conta como marco, mesmo que o jogo estivesse
+		# fechado e a planta tenha saltado vários estágios de uma vez.
+		if cultura:
+			for e in range(2, estado + 1):
+				Inventario.alcancar_marco(cultura.id, e)
 
 	set_process(estado == 1 or estado == 2 or estado == 3)
 

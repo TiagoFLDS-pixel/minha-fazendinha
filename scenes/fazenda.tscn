@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" path="res://scenes/loja_ui.tscn" id="5_lojaui"]
 [ext_resource type="Script" path="res://scripts/fazenda.gd" id="6_fazenda"]
 [ext_resource type="PackedScene" path="res://scenes/seletor_sementes_ui.tscn" id="7_seletor"]
+[ext_resource type="PackedScene" path="res://scenes/marcos_ui.tscn" id="8_marcos"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_armazem"]
 size = Vector2(260, 260)
@@ -28,6 +29,8 @@ shape = SubResource("RectangleShape2D_armazem")
 [node name="ArmazemUI" parent="." instance=ExtResource("4_armazemui")]
 
 [node name="LojaUI" parent="." instance=ExtResource("5_lojaui")]
+
+[node name="MarcosUI" parent="." instance=ExtResource("8_marcos")]
 
 [node name="SeletorSementesUI" parent="." instance=ExtResource("7_seletor")]
 
