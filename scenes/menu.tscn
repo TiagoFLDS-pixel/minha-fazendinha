@@ -1,0 +1,73 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/menu.gd" id="1_menu"]
+[ext_resource type="Texture2D" uid="uid://1sr64sqbo3c2" path="res://resources/sprites/Fundo_Fazenda.png" id="2_fundo"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_menu")
+
+[node name="Fundo" type="TextureRect" parent="."]
+modulate = Color(0.4, 0.4, 0.4, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_fundo")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Centro" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Caixa" type="VBoxContainer" parent="Centro"]
+layout_mode = 2
+theme_override_constants/separation = 18
+
+[node name="Titulo" type="Label" parent="Centro/Caixa"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/font_size = 72
+text = "Minha Fazendinha"
+horizontal_alignment = 1
+
+[node name="ContinuarButton" type="Button" parent="Centro/Caixa"]
+custom_minimum_size = Vector2(280, 56)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 26
+text = "Continuar"
+
+[node name="NovoJogoButton" type="Button" parent="Centro/Caixa"]
+custom_minimum_size = Vector2(280, 56)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 26
+text = "Novo jogo"
+
+[node name="SairButton" type="Button" parent="Centro/Caixa"]
+custom_minimum_size = Vector2(280, 56)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 26
+text = "Sair"
+
+[node name="Confirmacao" type="ConfirmationDialog" parent="."]
+title = "Novo jogo"
+ok_button_text = "Continuar"
+dialog_text = "Isto apaga o progresso atual. Continuar?"
+cancel_button_text = "Cancelar"

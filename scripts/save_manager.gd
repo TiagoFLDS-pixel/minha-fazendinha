@@ -12,6 +12,10 @@ const CAMINHO_SAVE := "user://savegame.json"
 var intervalo_autosave := 30.0
 var _tempo_desde_ultimo_save := 0.0
 
+## Desligado pelo menu inicial: sem canteiros nem save carregado, gravar
+## escreveria um save falso (ou apagaria o verdadeiro). Ligado ao abrir a fazenda.
+var gravacao_ativa := true
+
 
 func _ready() -> void:
 	get_tree().auto_accept_quit = false
@@ -31,6 +35,9 @@ func _notification(what: int) -> void:
 
 
 func salvar() -> void:
+	if not gravacao_ativa:
+		return
+
 	var dados := {
 		"moedas": Inventario.moedas,
 		"items": Inventario.items,
