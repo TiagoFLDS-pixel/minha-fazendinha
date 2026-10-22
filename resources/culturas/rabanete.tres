@@ -46,4 +46,4 @@ estagio_adulta = SubResource("Resource_rabanete_adulta")
 estagio_pronta = SubResource("Resource_rabanete_pronta")
 quantidade_colhida = 6
 preco_semente = 4
-preco_venda = 5
+preco_venda = 2
