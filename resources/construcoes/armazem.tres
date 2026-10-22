@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="DadosConstrucao" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/dados_construcao.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = &"armazem"
+nome = "Armazém"
+descricao = "Armazém independente para guardar a produção."
+materiais_consumidos = {
+"material_madeira": 10,
+"material_pedra": 4,
+"material_pregos": 6
+}
+ferramentas_reutilizaveis = PackedStringArray("ferramenta_martelo", "ferramenta_serrote")
+xp_conclusao = 20

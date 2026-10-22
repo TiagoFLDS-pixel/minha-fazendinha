@@ -47,3 +47,4 @@ estagio_pronta = SubResource("Resource_cenoura_pronta")
 quantidade_colhida = 4
 preco_semente = 14
 preco_venda = 9
+nivel = 6

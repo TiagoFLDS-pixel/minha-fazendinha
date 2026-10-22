@@ -54,7 +54,10 @@ func _canteiros() -> Array:
 	var fazenda := get_node_or_null("Fazenda")
 	if fazenda == null:
 		return lista
-	for filho in fazenda.get_children():
+	var grade := fazenda.get_node_or_null("GradeTerrenos")
+	if grade == null:
+		return lista
+	for filho in grade.get_children():
 		if String(filho.name).begins_with("Canteiro"):
 			lista.append(filho)
 	return lista

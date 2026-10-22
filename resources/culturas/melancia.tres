@@ -47,3 +47,4 @@ estagio_pronta = SubResource("Resource_melancia_pronta")
 quantidade_colhida = 2
 preco_semente = 36
 preco_venda = 46
+nivel = 17

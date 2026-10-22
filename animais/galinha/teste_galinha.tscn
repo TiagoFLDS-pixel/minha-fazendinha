@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="PackedScene" path="res://animais/galinha/galinha.tscn" id="1_galinha"]
+
+[node name="TesteGalinha" type="Node2D"]
+
+[node name="Fundo" type="ColorRect" parent="."]
+offset_right = 1536.0
+offset_bottom = 1024.0
+mouse_filter = 2
+color = Color(0.42, 0.65, 0.35, 1)
+
+[node name="Titulo" type="Label" parent="."]
+offset_left = 36.0
+offset_top = 28.0
+offset_right = 724.0
+offset_bottom = 88.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.15, 0.25, 0.12, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 30
+text = "Galinha adulta — IDLE ↔ WALK automático (8 FPS)"
+
+[node name="Instrucao" type="Label" parent="."]
+offset_left = 38.0
+offset_top = 83.0
+offset_right = 760.0
+offset_bottom = 122.0
+theme_override_colors/font_color = Color(0.94, 1, 0.9, 1)
+theme_override_font_sizes/font_size = 18
+text = "A deslocação ocorre apenas durante os quadros de passo."
+
+[node name="LimiteMovimento" type="Line2D" parent="."]
+points = PackedVector2Array(300, 700, 1236, 700)
+width = 4.0
+default_color = Color(0.25, 0.43, 0.2, 0.75)
+
+[node name="Galinha" parent="." instance=ExtResource("1_galinha")]
+position = Vector2(768, 700)
+idle_minimo = 1.2
+idle_maximo = 2.0
+caminhada_minima = 2.8
+caminhada_maxima = 3.8
+semente_aleatoria = 20261022
+limitar_movimento = true
+limites_movimento = Rect2(300, 610, 936, 90)
+

@@ -1,3 +1,4 @@
+@tool
 class_name Cultura
 extends Resource
 
@@ -22,6 +23,8 @@ extends Resource
 @export var preco_venda: int = 0
 
 @export_group("Progressão")
+## Nível do jogador a partir do qual a cultura fica disponível.
+@export var nivel: int = 1
 ## XP ganho por colheita. 0 = automático (1 XP por minuto de crescimento).
 @export var xp_colheita: int = 0
 

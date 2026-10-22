@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/construcao_evolutiva.gd" id="1"]
+[ext_resource type="Resource" path="res://resources/construcoes/armazem.tres" id="2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_armazem"]
+size = Vector2(260, 230)
+
+[node name="Armazem" type="Node2D"]
+script = ExtResource("1")
+id_construcao = &"armazem"
+nome_exibicao = "Armazém"
+dados = ExtResource("2")
+niveis_disponiveis = 3
+
+[node name="Visual" type="Node2D" parent="."]
+
+[node name="SpriteBase" type="Sprite2D" parent="Visual"]
+
+[node name="Paredes" type="Sprite2D" parent="Visual"]
+
+[node name="MateriaisConstrucao" type="Sprite2D" parent="."]
+
+[node name="AreaInteracao" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaInteracao"]
+shape = SubResource("RectangleShape2D_armazem")

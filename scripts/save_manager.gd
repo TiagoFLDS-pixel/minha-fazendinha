@@ -8,6 +8,7 @@ extends Node
 ## fechado é refletido corretamente ao reabrir.
 
 const CAMINHO_SAVE := "user://savegame.json"
+const VERSAO_SAVE_ATUAL := 2
 
 var intervalo_autosave := 30.0
 var _tempo_desde_ultimo_save := 0.0
@@ -39,12 +40,23 @@ func salvar() -> void:
 		return
 
 	var dados := {
+		"versao": VERSAO_SAVE_ATUAL,
 		"moedas": Inventario.moedas,
 		"items": Inventario.items,
 		"xp": Inventario.xp,
 		"marcos": Inventario.marcos,
+		"fazenda": {},
+		"construcoes": {},
 		"canteiros": {},
 	}
+
+	var fazenda := get_tree().get_first_node_in_group("fazenda")
+	if fazenda and fazenda.has_method("obter_save_data"):
+		dados["fazenda"] = fazenda.obter_save_data()
+
+	for construcao in get_tree().get_nodes_in_group("construcoes"):
+		if construcao.has_method("obter_save_data"):
+			dados["construcoes"][String(construcao.id_construcao)] = construcao.obter_save_data()
 
 	for canteiro in get_tree().get_nodes_in_group("canteiros"):
 		dados["canteiros"][canteiro.name] = canteiro.obter_save_data()
@@ -75,6 +87,7 @@ func carregar() -> void:
 		return
 
 	var dados: Dictionary = resultado
+	var save_antigo := int(dados.get("versao", 0)) < VERSAO_SAVE_ATUAL
 
 	Inventario.moedas = int(dados.get("moedas", Inventario.moedas))
 
@@ -92,6 +105,24 @@ func carregar() -> void:
 		for chave in (marcos as Dictionary).keys():
 			marcos_convertidos[chave] = int(marcos[chave])
 		Inventario.marcos = marcos_convertidos
+
+	var fazenda_salva: Variant = dados.get("fazenda")
+	var fazenda := get_tree().get_first_node_in_group("fazenda")
+	if typeof(fazenda_salva) == TYPE_DICTIONARY and fazenda and fazenda.has_method("aplicar_save_data"):
+		fazenda.aplicar_save_data(fazenda_salva)
+
+	var construcoes_salvas: Variant = dados.get("construcoes")
+	if typeof(construcoes_salvas) == TYPE_DICTIONARY:
+		for construcao in get_tree().get_nodes_in_group("construcoes"):
+			var id := String(construcao.id_construcao)
+			if (construcoes_salvas as Dictionary).has(id) and construcao.has_method("aplicar_save_data"):
+				construcao.aplicar_save_data(construcoes_salvas[id])
+
+	# Saves anteriores não continham a recuperação inicial. A migração mantém
+	# as construções que já apareciam no cenário como concluídas e nunca concede
+	# novamente a recompensa de XP.
+	if save_antigo and fazenda and fazenda.has_method("migrar_save_antigo"):
+		fazenda.migrar_save_antigo()
 
 	var canteiros_salvos: Variant = dados.get("canteiros")
 	if typeof(canteiros_salvos) != TYPE_DICTIONARY:

@@ -1,0 +1,51 @@
+[gd_resource type="SpriteFrames" load_steps=9 format=3]
+
+[ext_resource type="Texture2D" path="res://animais/galinha/sprites/walk_01.png" id="1_walk01"]
+[ext_resource type="Texture2D" path="res://animais/galinha/sprites/walk_02.png" id="2_walk02"]
+[ext_resource type="Texture2D" path="res://animais/galinha/sprites/walk_03.png" id="3_walk03"]
+[ext_resource type="Texture2D" path="res://animais/galinha/sprites/walk_04.png" id="4_walk04"]
+[ext_resource type="Texture2D" path="res://animais/galinha/sprites/walk_05.png" id="5_walk05"]
+[ext_resource type="Texture2D" path="res://animais/galinha/sprites/walk_06.png" id="6_walk06"]
+[ext_resource type="Texture2D" path="res://animais/galinha/sprites/walk_07.png" id="7_walk07"]
+[ext_resource type="Texture2D" path="res://animais/galinha/sprites/walk_08.png" id="8_walk08"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_walk01")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_walk01")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_walk02")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_walk03")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_walk04")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_walk05")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_walk06")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_walk07")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_walk08")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 8.0
+}]
+

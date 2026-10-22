@@ -45,5 +45,6 @@ estagio_broto = SubResource("Resource_abobora_broto")
 estagio_adulta = SubResource("Resource_abobora_adulta")
 estagio_pronta = SubResource("Resource_abobora_pronta")
 quantidade_colhida = 2
-preco_semente = 34
+preco_semente = 33
 preco_venda = 43
+nivel = 16

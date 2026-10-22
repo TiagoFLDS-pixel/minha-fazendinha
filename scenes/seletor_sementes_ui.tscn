@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/seletor_sementes_ui.gd" id="1_seletor"]
 
-[node name="SeletorSementesUI" type="CanvasLayer"]
+[node name="SeletorSementesUI" type="CanvasLayer" groups=["seletor_sementes"]]
 script = ExtResource("1_seletor")
 
 [node name="Painel" type="Panel" parent="."]

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="DadosConstrucao" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/dados_construcao.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = &"casa_principal"
+nome = "Casa principal"
+descricao = "A casa da família, partilhando o lote residencial com a casinha do cão."
+materiais_consumidos = {
+"material_madeira": 12,
+"material_pedra": 6,
+"material_pregos": 8
+}
+ferramentas_reutilizaveis = PackedStringArray("ferramenta_martelo", "ferramenta_serrote")
+xp_conclusao = 25

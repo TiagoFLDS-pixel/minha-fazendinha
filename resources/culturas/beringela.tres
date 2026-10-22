@@ -12,14 +12,14 @@ script = ExtResource("2_estagio")
 sprite = ExtResource("5_adulta")
 escala = Vector2(0.2500, 0.2500)
 offset = Vector2(419.9, 308.0)
-duracao = 480.0
+duracao = 432.0
 
 [sub_resource type="Resource" id="Resource_beringela_broto"]
 script = ExtResource("2_estagio")
 sprite = ExtResource("4_broto")
 escala = Vector2(0.2500, 0.2500)
 offset = Vector2(420.0, 346.0)
-duracao = 480.0
+duracao = 432.0
 
 [sub_resource type="Resource" id="Resource_beringela_pronta"]
 script = ExtResource("2_estagio")
@@ -33,7 +33,7 @@ script = ExtResource("2_estagio")
 sprite = ExtResource("3_semente")
 escala = Vector2(0.073, 0.073)
 offset = Vector2(420, 337)
-duracao = 240.0
+duracao = 216.0
 
 [resource]
 script = ExtResource("1_cultura")
@@ -45,5 +45,6 @@ estagio_broto = SubResource("Resource_beringela_broto")
 estagio_adulta = SubResource("Resource_beringela_adulta")
 estagio_pronta = SubResource("Resource_beringela_pronta")
 quantidade_colhida = 3
-preco_semente = 20
-preco_venda = 22
+preco_semente = 26
+preco_venda = 23
+nivel = 13

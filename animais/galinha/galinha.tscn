@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://animais/galinha/galinha.gd" id="1_script"]
+[ext_resource type="SpriteFrames" path="res://animais/galinha/galinha_spriteframes.tres" id="2_frames"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_corpo"]
+size = Vector2(68, 52)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_interacao"]
+size = Vector2(108, 118)
+
+[node name="Galinha" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_script")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -64)
+scale = Vector2(0.62, 0.62)
+sprite_frames = ExtResource("2_frames")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -28)
+shape = SubResource("RectangleShape2D_corpo")
+
+[node name="AreaInteracao" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaInteracao"]
+position = Vector2(0, -53)
+shape = SubResource("RectangleShape2D_interacao")
+
